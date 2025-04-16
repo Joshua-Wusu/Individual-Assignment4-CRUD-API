@@ -1,0 +1,485 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2c3e50;
+    --accent-color: #e74c3c;
+    --success-color: #2ecc71;
+    --warning-color: #f39c12;
+    --danger-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #34495e;
+    --text-muted: #7f8c8d;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.text-muted {
+    color: var(--text-muted) !important;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--secondary-color);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.logo-img {
+    max-height: 36px;
+    margin-right: 10px;
+}
+
+.brand-text {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 1px;
+}
+
+.nav-item {
+    margin: 0 5px;
+    font-size: 1.1rem;
+}
+
+.nav-link {
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+}
+
+    .nav-link:hover, .nav-link.active {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+.main-container {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+    .page-header h1 {
+        font-size: 2.5rem;
+        color: var(--secondary-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .page-header .lead {
+        font-size: 1.2rem;
+        color: var(--text-muted);
+    }
+
+/* Bird Cards */
+.bird-card {
+    transition: var(--transition);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    height: 100%;
+    border: none;
+}
+
+    .bird-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+    }
+
+.card-img-container {
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.card-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* This makes the image cover the container */
+    transition: transform 0.5s ease;
+}
+
+.bird-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--secondary-color);
+}
+
+.card-text {
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.conservation-status {
+    margin-top: auto;
+}
+
+.card-footer {
+    background-color: transparent;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    padding: 1rem;
+}
+
+/* Bird Detail Card */
+.bird-detail-card {
+    border: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.bird-image-container {
+    overflow: hidden;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    height: 100%;
+}
+
+    .bird-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+.bird-badge {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+}
+
+.bird-info {
+    margin-top: 1.5rem;
+}
+
+.info-item {
+    margin-bottom: 1.5rem;
+}
+
+    .info-item h3 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+    }
+
+        .info-item h3 i {
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+
+.bird-description {
+    line-height: 1.6;
+}
+
+.bird-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* Form Styling */
+.form-card {
+    border: none;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+    .form-card .card-header {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 1rem;
+    }
+
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-text {
+    font-size: 0.85rem;
+}
+
+.form-control, .form-select {
+    border-radius: var(--border-radius);
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+}
+
+    .form-control:focus, .form-select:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+    }
+
+/* About Page Styling */
+.about-card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.about-title {
+    color: var(--secondary-color);
+    font-size: 2.5rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+    .about-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background-color: var(--primary-color);
+    }
+
+.about-image-container {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    margin-bottom: 1.5rem;
+}
+
+.about-section {
+    padding: 1.5rem 0;
+}
+
+    .about-section h2 {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+        .about-section h2 i {
+            margin-right: 0.5rem;
+        }
+
+    .about-section p {
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+
+.feature-card {
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    height: 100%;
+}
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .feature-card h3 {
+        margin: 1rem 0;
+        color: var(--secondary-color);
+    }
+
+/* Error Page */
+.error-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.error-icon {
+    animation: pulse 2s infinite;
+}
+
+.error-title {
+    font-size: 2.5rem;
+    color: var(--danger-color);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 2rem;
+}
+
+.page-link {
+    color: var(--primary-color);
+    border-radius: 4px;
+    margin: 0 2px;
+}
+
+.page-item.active .page-link {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/* Media Queries */
+@media (max-width: 991.98px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .bird-image-container {
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+
+    .main-container {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .card-img-container {
+        height: 180px;
+    }
+
+    .bird-actions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+        .bird-actions .btn {
+            width: 100%;
+        }
+}
+
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .logo-img {
+        max-height: 30px;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-header .lead {
+        font-size: 1rem;
+    }
+}
+
+/* Accessibility */
+.btn:focus, .form-control:focus, a:focus {
+    outline: 3px solid rgba(52, 152, 219, 0.5);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .navbar, .footer, .bird-actions, .related-birds {
+        display: none;
+    }
+
+    .main-container {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .bird-detail-card {
+        box-shadow: none;
+        border: none;
+    }
+
+    body {
+        font-size: 12pt;
+    }
+
+    h1 {
+        font-size: 18pt
+
+.card-img-container {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.bird-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bird-image-container {
+    height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+}
+
+.bird-detail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
